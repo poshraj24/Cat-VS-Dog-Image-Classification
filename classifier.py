@@ -23,3 +23,17 @@ from skimage.io import imread_collection
 import glob
 
 #Reading .jpeg and .png images from the dataset 
+CATS_folder= 'D:\MSc_DS\Sem_3\Seminar\python-intro\input\PET-IMAGES\1. Cat'
+DOGS_folder= 'D:\MSc_DS\Sem_3\Seminar\python-intro\input\PET-IMAGES\2. Dog'
+
+imdir= CATS_folder
+ext= ['png','jpg']
+files= []
+[files.extend(glob.glob(imdir + '*.' + e)) for e in ext]
+images= [cv2.imread(file) for file in files]
+
+#Read in the training data(X) and corresponding labels(y).
+#data=pickle.load(open("data.pickle","rb"))
+X=pickle.load(open("X.pickle","rb"))
+y=pickle.load(open("y.pickle","rb"))
+
