@@ -23,8 +23,8 @@ from skimage.io import imread_collection
 import glob
 
 #Reading .jpeg and .png images from the dataset 
-CATS_folder= 'D:\MSc_DS\Sem_3\Seminar\python-intro\input\PET-IMAGES\1. Cat'
-DOGS_folder= 'D:\MSc_DS\Sem_3\Seminar\python-intro\input\PET-IMAGES\2. Dog'
+CATS_folder= 'PET-IMAGES\1. Cat'
+DOGS_folder= '\PET-IMAGES\2. Dog'
 
 imdir= CATS_folder
 ext= ['png','jpg']
